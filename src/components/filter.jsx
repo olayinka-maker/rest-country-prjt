@@ -9,15 +9,14 @@ const Filter = () => {
         onClick={() => setModal(!modal)}
       >
         <h3 className="text-textBases">Filter by Region +</h3>
-        {modal && (
-          <div className="bg-navBar absolute  top-48 flex flex-col px-4 rounded-sm py-2 justify-start w-48  ">
-            <p className=" py-1">Asia</p>
-            <p className=" py-1">America</p>
-            <p className=" py-1">Africa</p>
-            <p className=" py-1">Europe</p>
-            <p className=" py-1">Oceania</p>
-          </div>
-        )}
+
+        <div className="bg-navBar absolute  top-48 flex flex-col px-4 rounded-sm py-2 justify-start w-48  ">
+          <p className=" py-1">Asia</p>
+          <p className=" py-1">America</p>
+          <p className=" py-1">Africa</p>
+          <p className=" py-1">Europe</p>
+          <p className=" py-1">Oceania</p>
+        </div>
       </div>
     </div>
   );

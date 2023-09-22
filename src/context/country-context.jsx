@@ -7,7 +7,11 @@ const CountrycontextProvider = (props) => {
   const [Countrydata, setCountrydata] = useState(data);
   const [searchCountry, setSearchCountry] = useState("");
   const [filteredSearch, setFilteredSearch] = useState([]);
+  const [region, setRegion] = useState("nigeria");
 
+  const regionapi = `https://restcountries.com/v3.1/region/${region}`;
+
+  console.log(regionapi);
   useEffect(() => {
     if (searchCountry) {
       const filtered = Countrydata.filter((country) =>
@@ -23,6 +27,14 @@ const CountrycontextProvider = (props) => {
       setFilteredSearch(Countrydata);
     }
   }, [searchCountry, Countrydata]);
+
+  // useEffect(() => {
+  //   const datafetch = fetch(${regionapi});
+
+  //   return () => {
+  //     second
+  //   }
+  // }, [third])
 
   const contextValue = {
     Countrydata,
